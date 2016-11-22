@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title><%= shop.name %></title>
+      <link rel="stylesheet" href="../css/final.css" type="text/css" />
+      <script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script type="text/javascript" src="../scripts/googlemap<%= shop.id %>.js"></script>
+      <script type="text/javascript" src="../scripts/click.js"></script>
+      <script type="text/javascript" src="../scripts/gurunavi<%= shop.id %>.js"></script>
+   </head>
+   <body>
+      <div id="head">
+         <a href="/">トップページ</a>
+         &nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="/list">お気に入りリスト</a>
+      </div>
+      <div class="shop">
+         <div id="wrapper">
+            <h2>
+            <a href="/shops/<%= shop.id %>">
+            <%= shop.name %>
+            </a>
+            </h2>
+
+            <script type="text/javascript">
+               function changevalue() {
+                  var text = document.getElementById('fav').textContent; // ボタンのテキストを抽出(valueではない)
+                  if(text == "お気に入り登録"){
+                     text = "お気に入り削除";
+                  }else{
+                     text = "お気に入り登録";
+                     if(confirm('本当に削除していいですか？ ')){
+                        alert("削除しました!");
+                     }else{
+                        alert("キャンセルしました!");
+                     }
+                     
+                  }
+                  document.getElementById('fav').textContent = text;
+                  }
+            </script>
+
+            <!-- フォームを/postに送信、server.jsのapp.postで受け取る -->
+            <form id="form" name="form" action="/post" method="POST">
+            <!-- '?'if(shop.visible=true), ':'else -->
+            <button onclick="changevalue();" name="fav" id="fav" value="<%= shop.id %>"><%= shop.visible ? "お気に入り削除" : "お気に入り登録" %></button>
+            </form>
+
+            <img src="<%= shop.image %>" class="topimg">
+
+         </div>
+
+         <table summary="お店の説明">
+            <tr>
+            <th class="top" width="100">HP</th>
+            <td class="top">
+            <a href="<%= shop.url %>" target="_blank"><%= shop.url %></a>
+            </td>
+            </tr>
+            <tr>
+            <th>営業時間</th>
+            <td>
+            <% for(var i=0;i<shop.time.length;i++) { %><%= shop.time[i] %><br /><% } %>
+            </td>
+            </tr>
+            <tr>
+            <th>所在地</th>
+            <td>
+            <% for(var i=0;i<shop.address.length;i++) { %><%= shop.address[i] %><br /><% } %>
+            </td>
+            </tr>
+            <tr>
+            <th>定休日</th>
+            <td><%= shop.rest %></td>
+            </tr>
+         </table>
+         <div id="map" style="width:400px;height:300px"></div>
+         <div id="gurunabi"> 
+            <input type="button" value="口コミを見る" class="js--apply" />
+            <p>Powered by <a href="http://www.gnavi.co.jp/">ぐるなび</a></p>
+         </div>
+      </div>  
+   </body>
+</html>

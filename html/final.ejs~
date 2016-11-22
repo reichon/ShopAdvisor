@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	<meta charset="UTF-8">
+   	<title>情報基礎2 final</title>
+      <link rel="stylesheet" href="../css/final.css" type="text/css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script type="text/javascript" src="../scripts/framework.js"></script>
+   </head>
+   <body>
+      <div id="head">
+         <a href="/list">お気に入りリスト</a>
+      </div>
+      <div id="wrapper">
+         <header>
+            <img src="../img/top.png" alt="shonangohanzukan" height="200" />
+            <p><a href="/about" class="about">湘南ごはん図鑑とは？</a></p>
+         </header>
+         <ul id="menu">
+         <li id="current" class="current"><a href="/">すべて</a></li>
+         <li><a href="/">居酒屋</a></li>
+         <li><a href="/">和食</a></li>
+         <li><a href="/">洋食</a></li>
+         <li><a href="/">中華</a></li>
+         <li><a href="/">焼肉</a></li>
+         <li><a href="/">ダイニングバー</a></li>
+         </ul>
+
+         <ul id="shops">
+            <% shops.forEach(function(shop){ %>
+            <li class="<%= shop.class %>"><a href="/shops/<%= shop.id %>"><img src="<%= shop.image %>" alt="shop<%= shop.id %>" height="150" class="<%= shop.class %>" />
+            <h1><%= shop.name %></h1>
+            </a>
+            </li>
+            <% }); %> 
+         </ul>
+      </div>
+   </body>
+</html>

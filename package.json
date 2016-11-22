@@ -1,0 +1,18 @@
+{
+  "name": "owari",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "node scripts/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "corser": "^2.0.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "querystring": "^0.2.0"
+  }
+}

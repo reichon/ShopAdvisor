@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>お気に入りリスト</title>
+      <link rel="stylesheet" href="../css/final.css" type="text/css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   </head>
+
+   <body>
+      <div id="wrapper">
+         <div id="head">
+            <a href="/">トップページ</a>
+         </div>
+         <header>
+         <h2>お気に入り</h2>
+         </header>
+
+         <ul id="shops-list">
+            <!-- visibleがtrueだった店のみ表示 -->
+            <% for(var i=0; i<data.length; i++){ %>
+            <% if(data[i].visible == true){ %>
+            <!--<a href= /shops/<%= data[i].id %> > <%= data[i].name %> </a>-->
+            <li class=<%= data[i].class %>><a href=/shops/<%= data[i].id %>><img src=<%= data[i].image %> alt=shop<%= data[i].id %> width="130" height="130" class=<%= data[i].class %> />
+            <h1><%= data[i].name %></h1>
+            </a>
+            </li>
+            <% } %>
+            <% } %>
+         </ul>
+      </div>
+   </body>
+</html>

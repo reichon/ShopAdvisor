@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+	line-height: 150%;
+	color: #000000;
+	font-family:"游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	background-color:#EEEEEE;
+}
+#wrapper{
+	width: 80%;
+	margin: 0 auto;
+	padding: 0 auto;
+	line-height: 150%;
+	text-align:center;
+	height:100%;
+}
+#gurunabi{
+	text-align:center;
+}
+#gauge{
+	text-align:center;
+}
+div#title {
+	width: auto;
+	font-size: 20px;
+	color: #000000;
+	font-weight: bold;
+}
+div#head {
+	font-size: 12px;
+	text-align: right;
+	padding-right: 100px;
+}
+p{
+	line-height:200%;
+}
+h1 {
+	font-size: 16px;
+	color: #000000;
+	font-weight:normal;
+	text-align: center;
+}
+h2{
+	line-height:200%;
+	text-align: center;
+}
+h3{
+	line-height:150%;
+	font-size:40px;
+	padding:10px;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover.about{
+	color:#D2D2EE;
+}
+a:visited {
+	color: #000000;
+}
+li {
+	list-style: none;
+}
+
+/**メニュー**/
+ul#menu {
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	width: 848px;
+}
+ul#menu li {
+	border-right: 1px solid #000000;
+	font-size: 18px;
+	margin-right: 5px;
+	padding-right:5px;
+	line-height: 175%;
+	float: left;
+	width: 100px;
+}
+ul#menu li:first-child{ 
+	border-left:1px solid #000000;
+	margin-left: 0px;
+	padding-left:5px;
+}
+ul#menu li.current {
+	font-weight: bold;
+}
+
+/**ショップリスト**/
+ul#shops li {
+	float: left;
+	list-style: none;
+	padding: 10px 10px 0 10px;
+	margin: 5px;
+	background:#FFFFFF;
+	text-align:center;
+	width:225px; 
+	/* box-shadow */
+	box-shadow:rgba(196, 196, 196, 0.65098) 0px 0px 4px 2px;
+	-webkit-box-shadow:rgba(196, 196, 196, 0.65098) 0px 0px 4px 2px;
+	-moz-box-shadow:rgba(196, 196, 196, 0.65098) 0px 0px 4px 2px;
+}
+ul#shops-list li {
+	float: left;
+	list-style: none;
+	padding: 10px 10px 0 10px;
+	margin: 5px;
+	background:#FFFFFF;
+	text-align:center;
+	width:155px; 
+	/* box-shadow */
+	box-shadow:rgba(196, 196, 196, 0.65098) 0px 0px 4px 2px;
+	-webkit-box-shadow:rgba(196, 196, 196, 0.65098) 0px 0px 4px 2px;
+	-moz-box-shadow:rgba(196, 196, 196, 0.65098) 0px 0px 4px 2px;
+}
+ul#shops li.和食 {
+	border-bottom:solid 10px #E3F5E1;
+}
+ul#shops-list li.和食 {
+	border-bottom:solid 10px #E3F5E1;
+}
+ul#shops li.洋食 {
+	border-bottom:solid 10px #FFF5E3;
+}
+ul#shops-list li.洋食 {
+	border-bottom:solid 10px #FFF5E3;
+}
+ul#shops li.diningbar{
+	border-bottom:solid 10px #E1E2F5;
+}
+ul#shops-list li.diningbar{
+	border-bottom:solid 10px #E1E2F5;
+}
+ul#shops li.中華{
+	 border-bottom:solid 10px #F5F4E1;
+}
+ul#shops-list li.中華{
+	  border-bottom:solid 10px #F5F4E1;
+}
+ul#shops li.焼肉{
+	 border-bottom:solid 10px #965E2E;
+}
+ul#shops-list li.焼肉{
+	 border-bottom:solid 10px #965E2E;
+}
+ul#shops li.居酒屋{
+	 border-bottom:solid 10px #F5E1ED;
+}
+ul#shops-list li.居酒屋{
+	 border-bottom:solid 10px #F5E1ED;
+}
+#shops li:hover {
+	opacity: 0.6;
+	transition: 0.5s;
+}
+img{
+	border-radius: 10px;
+}
+.topimg{
+	width:300px;
+	margin-right:auto;
+	margin-left:auto;
+	text-align:center;
+}
+/**表**/
+table{
+	border-collapse:collapse;
+	width:400px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	margin-bottom:20px;
+	border-radius: 20px; 
+}
+th{
+	font-weight:bold;
+	border-bottom:5px solid #EEEEEE;
+	background-color:#FFFFFF;
+	padding:10px;
+	font-weight:normal;
+	text-align: center;
+}
+th.top{
+	border-top:5px solid #EEEEEE;
+}
+td{
+	border-bottom:5px solid #EEEEEE;
+	padding:10px;
+	background-color:#FFFFFF;
+}
+td.top{
+	border-top:5px solid #EEEEEE;
+}
+/**地図**/
+#map{
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:20px;
+}
+/**ボタン**/
+form#form {
+	text-align: right;
+	padding-right: -200px;
+}
